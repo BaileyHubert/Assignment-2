@@ -1,0 +1,29 @@
+package main;
+/*
+ * PSUEDOCODE:
+ * Start program
+ * Import JOptionPane for GUI
+ * Prints to GUI "Enter your grade."
+ * Detects input grade
+ * Assigns input grade to variable a
+ * If variable a > 50:
+ * 	Prints to GUI "Pass."
+ * Else:
+ * 	Prints to GUI "Fail."
+ * Ends program.
+ */
+
+import javax.swing.JOptionPane;
+
+public class Question1 {
+
+	public static void main(String[] args) {
+String inputA = JOptionPane.showInputDialog("Enter your grade.");
+Double a = Double.parseDouble(inputA);
+
+if (a>50) {
+JOptionPane.showMessageDialog(null, "Pass.");}
+
+else { 
+JOptionPane.showMessageDialog(null, "Fail.");}
+}}
