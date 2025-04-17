@@ -1,0 +1,40 @@
+package main;
+/*
+ * PSUEDOCODE:
+ * Start program
+ * Import JOptionPane for GUI
+ * Prints "This is a logic gate calculator.
+ * Press ok to begin." to the GUI
+ * Prints to GUI "Enter the first boolean operator, true/false"
+ * Detects input value "true" or "false" and assigns the value to variable a
+ * Repeats this for the second value and variable b
+ * Calculates the result of and and gate, or gate, and nand gate
+ * prints to GUI the result as:
+ * "RESULTS:
+ * AND GATE = true/false
+ * OR GATE = true/false
+ * NAND GATE = true/false"
+ * Ends program.
+ */
+
+import javax.swing.JOptionPane;
+
+public class Question1 {
+
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, "This is a logic gate calculator. \n"+"Press ok to begin.");
+String inputA = JOptionPane.showInputDialog("Enter the first boolean operator, true/false.");
+boolean a = Boolean.parseBoolean(inputA);
+
+String inputB = JOptionPane.showInputDialog("Enter the second boolean operator, true/false.");
+boolean b = Boolean.parseBoolean(inputB);
+
+boolean andgate = (a&&b);
+boolean or = a||b;
+boolean nand = !(a&&b);
+
+String resultMessage = "RESULTS: \n" + "AND GATE = " + andgate + "\n" + "OR GATE = " + or + "\n" + "NAND GATE = " + nand;
+
+JOptionPane.showMessageDialog(null,  resultMessage);
+	}
+}
