@@ -1,0 +1,54 @@
+package main;
+/*
+ * PSUEDOCODE
+ * Starts program
+ * Imports scanner
+ * Activates scanner
+ * Prints to console "Enter a number to begin:"
+ * Begins scanning for entered number
+ * Creates variables "pn" for Positive/Negative, and "ls" for Large/ Small
+ * Detects if number is zero
+ * If number is zero;
+ *  prints "Zero." 
+ *  program ends
+ * Else;
+ * Checks if number is <1, if so, sets "ls" to Small
+ * Checks if number is >1000000, if so, sets "ls" to Large
+ * Checks if number is >0, if so, sets "pn" to Positive
+ * Checks if number is <0, if so, sets "pn" to Negative
+ * Prints results as "[Large/Small], [Positive/Negative]."
+ * Program ends
+ */
+import java.util.Scanner; //imports java scanner
+public class Question1 {
+
+	public static void main(String[] args) {
+		
+	Scanner in = new Scanner (System.in); //activates scanner
+	
+	System.out.println("Enter a number to begin:"); //sends "Enter a number to begin:" to console on start 
+	
+	double i = in.nextDouble(); //sets up scanning for entered number
+	
+String pn = "";
+String ls = ""; //sets up variables for positive/negative and large/small
+
+if (i == 0)
+{System.out.println("Zero.");} //prints "Zero" if number is zero
+
+else { //this section only runs if the number is not zero
+if (Math.abs(i)<1)
+{ ls = "Small, ";} //checks for "small" requirements
+
+if (Math.abs(i)>1000000)
+{ ls = "Large, ";} //checks for "large" requirements
+
+if (i>0)
+{ pn = "Positive";} //checks for "positive" requirements
+
+if (i<0)
+{ pn = "Negative";} //checks for "negative" requirements
+
+System.out.println(ls + pn + "."); //prints the results as "[Large/Small], [Positive/Negative]."
+}
+}}
